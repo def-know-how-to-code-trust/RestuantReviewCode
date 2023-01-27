@@ -1,0 +1,43 @@
+/*setting the thigns for the edit button*/
+.edit {
+    float: right;
+    padding-right: 10px;
+}
+/* Set the background color of the website */
+body {
+    background-color: #f2f2f2;
+  }
+  /* Style the navigation bar */
+.topNaviBar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  /* Style the links in the navigation bar */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+  }
+  /* Style the search bar */
+  form {
+    display: flex;
+  }
+  input[type="text"] {
+    padding: 14px 16px;
+    margin-right: 16px;
+    border: none;
+    background-color: #ddd;
+  }
+  button[type="submit"] {
+    padding: 14px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  /* Style the heading and text on the website */
+  h1, p {
+    text-align: center;
+    margin-top: 50px;
+  }
