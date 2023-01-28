@@ -21,8 +21,7 @@ function displayRes(cate) {
         var resName = resArray[count].res_name;
         var cell = '<div class="card col-md-3" ><img class="card-img-top" src="' + coverPic + '" alt="Card image cap">\
         <div class="card-body"><i class="far fa-comment fa-lg" style="float:left;cursor:pointer" data-toggle="modal" data-target="#commentModal" item="' + count + '"></i>\
-        <h5 style="padding-left:30px;cursor:pointer" data-toggle="modal" data-target="#resPage" class="card-title" item="' + count + '" onClick="">' + resName + '</h5></div>\
-        </div>'
+        <h5 style="padding-left:30px;cursor:pointer" item="' + count + '" onmouseenter="setCurrRes(this)"><a href="ResPage.html">' + resName + '</a></h5>'
         table.insertAdjacentHTML('beforeend', cell);
         resCount++;
 
@@ -33,3 +32,26 @@ function displayRes(cate) {
 
 }
 
+function showResPage(){
+    console.log("loaded once")
+    currRes_True = sessionStorage.getItem("resIn");
+    console.log(currRes_True)
+    document.getElementById("resName").textContent=resArray[currRes_True].res_name;
+}
+function setCurrRes(element){
+    currRes_True = element.getAttribute("item");
+    sessionStorage.setItem("resIn",currRes_True);
+    console.log(currRes_True);
+}
+function getAllRes_Page() {
+    console.log("here work");
+    var request = new XMLHttpRequest();
+    request.open('GET', res_url, true);
+
+    request.onload = function () {
+        resArray = JSON.parse(request.responseText);
+        console.log(resArray);
+        showResPage();
+    };
+    request.send();
+}

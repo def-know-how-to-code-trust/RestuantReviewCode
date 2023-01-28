@@ -4,10 +4,7 @@
     padding-right: 10px;
 }
 /* Set the background color of the website */
-body {
-    background-color: #f2f2f2;
-  }
-  /* Style the navigation bar */
+/* Style the navigation bar */
 .topNaviBar {
     background-color: #333;
     color: #fff;
