@@ -35,7 +35,6 @@ function displayRes(cate) {
 function showResPage(){
     console.log("loaded once")
     currRes_True = sessionStorage.getItem("resIn");
-    console.log(currRes_True)
     document.getElementById("resName").textContent=resArray[currRes_True].res_name;
     document.getElementById("resRating").textContent=resArray[currRes_True].res_stars;
     document.getElementById("resRewC").textContent=resArray[currRes_True].res_reviewCount;
@@ -46,21 +45,44 @@ function showResPage(){
     document.getElementById("resCon").textContent=resArray[currRes_True].res_contact;
     document.getElementById("resRange").textContent=resArray[currRes_True].res_priceRange;
     document.getElementById("resLoc").textContent=resArray[currRes_True].res_location;
+
 }
 function setCurrRes(element){
     currRes_True = element.getAttribute("item");
+    var resLattitude = resArray[currRes_True].res_latitude;
+    var resLongtitude = resArray[currRes_True].res_longtitude;
+    var resName_T = resArray[currRes_True].res_name;
     sessionStorage.setItem("resIn",currRes_True);
-    console.log(currRes_True);
-}no
+    sessionStorage.setItem("resLat",resLattitude);
+    sessionStorage.setItem("resLong",resLongtitude);
+    sessionStorage.setItem("resName",resName_T)
+    //console.log(currRes_True);
+}
 function getAllRes_Page() {
-    console.log("here work");
     var request = new XMLHttpRequest();
     request.open('GET', res_url, true);
 
     request.onload = function () {
         resArray = JSON.parse(request.responseText);
-        console.log(resArray);
         showResPage();
     };
     request.send();
+}
+function initMap(){
+ var lati = parseFloat(sessionStorage.getItem("resLong"));
+ console.log(lont);
+ var lont = parseFloat(sessionStorage.getItem("resLat"));
+ console.log(lati);
+ var resNameM = sessionStorage.getItem("resName");
+    var resLoc_M = new google.maps.LatLng(lati,lont);
+    var resMap = new google.maps.Map(document.getElementById("res_map_real"),{
+        center: {lat:lati,lng:lont},
+        zoom: 18,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    });
+    var marker = new google.maps.Marker({
+        position: resLoc_M,
+        map: resMap,
+        title: resNameM
+    });
 }

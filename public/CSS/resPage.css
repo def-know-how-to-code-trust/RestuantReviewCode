@@ -9,7 +9,7 @@
     background-color: #333;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-evenly;
     list-style-type: none;
   }
   /* Style the links in the navigation bar */
@@ -45,3 +45,12 @@
     width: 175px;
     ;
   }
+  #res_map_real{
+    height: 400px; /* The height is 400 pixels */
+  width: 400px;
+  }
+#logo-png{
+  height: 40px;
+  width: 164px;
+  align-self: center;
+}

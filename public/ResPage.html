@@ -11,6 +11,7 @@
 <body onload="getAllRes_Page()">
     <div class="navBar">
         <nav class="topNaviBar">
+            <img src="Images/Icons/Eat in lah.jpg" alt="Logo" id="logo-png">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Restaurants</a></li>
@@ -25,24 +26,35 @@
     </div>
     <div class="content" style="overflow: auto;">
         <h1 id="resName">Res name</h1>
+        <p>Restaurant Rating</p>
         <p id="resRating"></p>
+        <p>The number of reviews the Restaurant have is</p>
         <p id="resRewC"></p>
         <img alt="resImage" id="covFoto">
+        <p>About the Restaurant</p>
         <p id="resAb"></p>
+        <p>Opening Hours</p>
         <p id="opHr"></p>
+        <p>Restaurant webpage</p>
         <p id="resWeb"></p>
+        <p>restuant contact</p>
         <p id="resCon"></p>
+        <p>Price range of the Restaurant</p>
         <p id="resRange"></p>
+        <p>Location</p>
         <p id="resLoc"></p>
-
-        <span></span>
+        <div id="res_map_real">
+        </div>
     </div>
 
 
 
 
 
-
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFJ4MLTrB1d-75ZMfJydSi-jtBDUWUuKU&callback=initMap" async
+        defer>
+    </script>
     <script src="JS/app.js"></script>
     <script src="JS/restuant.js"></script>
     <script src="JS/review.js"></script>
