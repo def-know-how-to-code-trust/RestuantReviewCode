@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/resPage.css">
     <title>Eat In Lah</title>
 </head>
 
 <body onload="getAllRes_Page()">
-    <h1 id="resName">Res name</h1>
+    <div class="navBar">
+        <nav class="topNaviBar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Restaurants</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="ResPage.html">Login | Signup</a></li>
+            </ul>
+            <form>
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+    <div class="content" style="overflow: auto;">
+        <h1 id="resName">Res name</h1>
+        <p id="resRating"></p>
+        <p id="resRewC"></p>
+        <img alt="resImage" id="covFoto">
+        <p id="resAb"></p>
+        <p id="opHr"></p>
+        <p id="resWeb"></p>
+        <p id="resCon"></p>
+        <p id="resRange"></p>
+        <p id="resLoc"></p>
+
+        <span></span>
+    </div>
+
 
 
 

@@ -1,45 +1,74 @@
 /*setting the thigns for the edit button*/
 .edit {
-    float: right;
-    padding-right: 10px;
+  float: right;
+  padding-right: 10px;
 }
+
 /* Set the background color of the website */
 /* Style the navigation bar */
 .topNaviBar {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-  }
-  /* Style the links in the navigation bar */
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 14px 16px;
-  }
-  /* Style the search bar */
-  form {
-    display: flex;
-  }
-  input[type="text"] {
-    padding: 14px 16px;
-    margin-right: 16px;
-    border: none;
-    background-color: #ddd;
-  }
-  button[type="submit"] {
-    padding: 14px 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-  }
-  /* Style the heading and text on the website */
-  h1, p {
-    text-align: center;
-    margin-top: 50px;
-  }
-  .card-img-top{
-    height: 175px;
-    width: 175px;
-    ;
-  }
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+/* Style the links in the navigation bar */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 16px;
+  list-style-type: none;
+}
+
+/* Style the search bar */
+form {
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 14px 16px;
+  margin-right: 16px;
+  border: none;
+  background-color: #ddd;
+}
+
+button[type="submit"] {
+  padding: 14px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+/* Style the heading and text on the website */
+h1,
+p {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.card-img-top {
+  height: 175px;
+  width: 175px;
+  ;
+}
+
+#carousel {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+#carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+#carousel img:first-child {
+  display: block;
+}
