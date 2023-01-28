@@ -33,7 +33,6 @@ function displayRes(cate) {
 }
 
 function showResPage(){
-    console.log("loaded once")
     currRes_True = sessionStorage.getItem("resIn");
     document.getElementById("resName").textContent=resArray[currRes_True].res_name;
     document.getElementById("resRating").textContent=resArray[currRes_True].res_stars;
@@ -52,11 +51,12 @@ function setCurrRes(element){
     var resLattitude = resArray[currRes_True].res_latitude;
     var resLongtitude = resArray[currRes_True].res_longtitude;
     var resName_T = resArray[currRes_True].res_name;
+    var res_ID = resArray[currRes_True].res_ID;
     sessionStorage.setItem("resIn",currRes_True);
     sessionStorage.setItem("resLat",resLattitude);
     sessionStorage.setItem("resLong",resLongtitude);
     sessionStorage.setItem("resName",resName_T)
-    //console.log(currRes_True);
+    sessionStorage.setItem("res_ID",res_ID);
 }
 function getAllRes_Page() {
     var request = new XMLHttpRequest();

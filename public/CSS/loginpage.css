@@ -1,0 +1,25 @@
+form {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+  }
+  
+  input[type="text"], input[type="password"] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  

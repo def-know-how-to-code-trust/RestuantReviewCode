@@ -54,3 +54,20 @@
   width: 164px;
   align-self: center;
 }
+#addReview{
+  width: 338px;
+  height: 52px;
+}
+.card{
+  outline: #333;
+}
+#delBtn{
+  width: 100px;
+  height: 100px;
+  background-image: url('/Images/Icons/Icon-material-delete-forever.png');
+}
+#editBtn{
+  width: 100px;
+  height: 100px;
+  background-image: url('/Images/Icons/Icon-feather-edit-3.png');
+}

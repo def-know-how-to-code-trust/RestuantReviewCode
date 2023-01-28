@@ -8,21 +8,21 @@
     <title>Eat In Lah</title>
 </head>
 
-<body onload="getAllRes_Page()">
+<body onload="getAllRes_Page();getReviews()">
     <div class="navBar">
         <nav class="topNaviBar">
             <img src="Images/Icons/Eat in lah.jpg" alt="Logo" id="logo-png">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="ResPage.html">Login | Signup</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Restaurants</a></li>
+              <li><a href="index.html">Categories</a></li>
+              <li><a href="login.html">Login | Signup</a></li>
             </ul>
             <form>
-                <input type="text" placeholder="Search...">
-                <button type="submit">Search</button>
+              <input type="text" placeholder="Search...">
+              <button type="submit">Search</button>
             </form>
-        </nav>
+          </nav>
     </div>
     <div class="content" style="overflow: auto;">
         <h1 id="resName">Res name</h1>
@@ -45,9 +45,18 @@
         <p id="resLoc"></p>
         <div id="res_map_real">
         </div>
+
+        <div class="reviewBody">
+            <h1>reviews</h1>
+            <a href="#" onclick="newRew()">
+                <img src="Images/Icons/Component 17 – 1.jpg" id="addReview">
+            </a>
+            <div id="rewBody">
+                <p>There is no reviews, how about adding your own?</p>
+            </div>
+        </div>
+    
     </div>
-
-
 
 
 

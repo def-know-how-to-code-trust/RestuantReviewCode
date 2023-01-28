@@ -72,3 +72,8 @@ p {
 #carousel img:first-child {
   display: block;
 }
+#logo-png{
+  height: 40px;
+  width: 164px;
+  align-self: center;
+}
