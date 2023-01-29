@@ -4,4 +4,7 @@ var resCount = 0;
 var catg = "ALL";
 var currRes_True=0;
 var rew_url ="/comments/get";
+var add_rew ="/comments/add";
 var rewArray = [];
+var popcornImage = "Images/Icons/Path 24.jpg";
+var popcornBWImage = "Images/Icons/Polygon -1.jpg";

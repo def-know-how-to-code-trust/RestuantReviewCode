@@ -42,6 +42,7 @@ function addReview(request,respond){
 };
 
 function editReview(request,respond){
+    console.log("edit rew controller called")
     var now = new Date();
     var reviewID = parseInt(request.params.id);
     var review = new Review(reviewID,
@@ -54,6 +55,8 @@ function editReview(request,respond){
     reviewsDB.editReview(review,function(error,result){
         if (error){
             respond.json(error);
+            console.log(error);
+            console.log(now);
         }
         else{
             respond.json(result);
