@@ -31,7 +31,29 @@ function showReview(arr) {
                 star += "<img src='Images/Icons/Path 24.jpg' style='width:50px' />";
             }
             star += "<button id='delBtn' item='" + i + "' onClick='deleteComment(this)'></button>";
-            star += "<div id='editBtn' data-target='#editCommentModal' data-dismiss='modal' item='" + i + "' onClick='editComment(this)'></button>";
+            star += "<div id='editBtn' data-target='#editRevModal' data-dismiss='modal' item='" + i + "' onClick='editComment(this)'></button>";
             document.getElementById("rating" + i).insertAdjacentHTML('beforebegin', star + "<br/>");
         }
+}
+
+function newRev() {
+//Initialise each HTML input elements in the modal window with default value.
+    var modal = document.getElementById("addrevshow");
+    modal.classList.remove("temphide");
+    modal.classList.add("show-modal");
+    
+    rating = 0;
+    document.getElementById("userComments").value = "";
+    document.getElementById("nickname").value = "";
+}
+function addRev(){
+    var review = new Object();
+    review.revi_res_id=parseInt(sessionStorage.getItem("res_ID"));
+    review.revi_user_id="test_user";
+    review.revi_user_name=document.getElementById("nickname").value;
+    review.revi_review = document.getElementById("userComments").value;
+    review.revi_rating = rating;
+
+    var postReview = new XMLHttpRequest();
+    
 }

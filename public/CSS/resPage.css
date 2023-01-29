@@ -54,10 +54,6 @@
   width: 164px;
   align-self: center;
 }
-#addReview{
-  width: 338px;
-  height: 52px;
-}
 .card{
   outline: #333;
 }
@@ -70,4 +66,16 @@
   width: 100px;
   height: 100px;
   background-image: url('/Images/Icons/Icon-feather-edit-3.png');
+}
+#addRev{
+  width: 338px;
+  height: 52px;
+  background-image: url("/Images/Icons/Component\ 17\ –\ 1.jpg");
+}
+.temphide{
+  display: none;
+}
+.show-modal{
+  display: block;
+  visibility: visible;
 }
