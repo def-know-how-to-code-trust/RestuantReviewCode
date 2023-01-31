@@ -60,17 +60,17 @@
 #delBtn{
   width: 100px;
   height: 100px;
-  background-image: url('/Images/Icons/Icon-material-delete-forever.png');
+  background-image: url('/Images/Icons/deleteforever.png');
 }
 #editBtn{
   width: 100px;
   height: 100px;
-  background-image: url('/Images/Icons/Icon-feather-edit-3.png');
+  background-image: url('/Images/Icons/Icon feather edit3.png');
 }
 #addRev{
   width: 338px;
   height: 52px;
-  background-image: url("/Images/Icons/Component\ 17\ –\ 1.jpg");
+  background-image: url("/Images/Icons/Component17 1.jpg");
 }
 .temphide{
   display: none;
