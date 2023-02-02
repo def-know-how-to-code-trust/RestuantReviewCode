@@ -85,21 +85,27 @@ function editUser(request,respond){
     })
 }
 function getLoginCred(request,respond){
-    var userId = request.params.usrID;
+    var userId = request.body.usrID;
     var pwd = request.body.password;
     var msg="";
     console.log("in user controller",userId);
+    console.log("in user controller",pwd);
     usersDB.getLoginCred(userId,function(error,result){
         if(error){
+            console.log(error);
             throw error;
         }else{
             if(result.length>0){
                 if(pwd == result[0].password){
+                    console.log(pwd);
+                    console.log(result[0].password);
                     msg="SUCCESS!!!";
                     console.log(msg);
                 }else{
                     msg="FAIL!!!";
                     console.log(msg);
+                    console.log(pwd);
+                    console.log(result[0].password);
                 }
             }else{
                 msg="user not found"

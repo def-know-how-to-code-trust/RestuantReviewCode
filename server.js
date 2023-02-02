@@ -31,7 +31,7 @@ app.route('/users/get/:id').get(userController.getUserById);
 app.route('/users/add').post(userController.addUser);
 app.route('/users/del/:id').delete(userController.delUser);
 app.route('/users/update/:id').put(userController.editUser);
-app.route('/users/login/:usrID').get(userController.getLoginCred);
+app.route('/users/login').post(userController.getLoginCred);
 //MenuCat functions
 
 app.route('/menucat/getall').get(menuCatController.getAllMenuCat);

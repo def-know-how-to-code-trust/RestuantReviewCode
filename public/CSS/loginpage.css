@@ -22,4 +22,21 @@ form {
     cursor: pointer;
     width: 100%;
   }
-  
+  .topNaviBar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content:space-evenly;
+    list-style-type: none;
+  }
+  /* Style the links in the navigation bar */
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 16px;
+    list-style-type: none;
+  }
+  #logo-png{
+    height: 40px;
+    width: 164px;
+    align-self: center;}
