@@ -23,7 +23,7 @@ function user_register(){
     User.user_email = document.getElementById("email").value;
     User.user_contact = document.getElementById("contact").value;
     User.user_postal = document.getElementById("postal").value;
-    
+    confirm("Press a button!\nEither OK or Cancel.");
     var register = new XMLHttpRequest();
     register.open("POST","/users/add",true);
     register.setRequestHeader("Content-Type", "application/json");

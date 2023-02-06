@@ -2,6 +2,7 @@
 const UsersDB = require('../models/UsersDB');
 const Users = require('../models/Users');
 const { request } = require('express');
+const bcrypt = require('bcrypt');
 
 var usersDB = new UsersDB();
 
@@ -17,17 +18,25 @@ function getAllUsers(request,respond){
 };
 
 function addUser(request,respond){
+    var password = request.body.user_pass;
+    console.log(password);
+    var hasedPasss = bcrypt.hashSync(request.body.user_pass,10);
+    bcrypt.hashSync;
+    console.log(hasedPasss);
     var user = new Users(null,
         request.body.user_id,
         request.body.user_name,
-        request.body.user_pass,
+        hasedPasss,
         request.body.user_email,
         request.body.user_contact,
         request.body.user_postal,
         request.body.user_pic);
+    console.log(user);
     usersDB.addUser(user,function(error,result){
         if (error){
             respond.json(error);
+            console.log("error adding user");
+            confirm.log(error);
         }
         else{
             respond.json(result);
@@ -96,16 +105,19 @@ function getLoginCred(request,respond){
             throw error;
         }else{
             if(result.length>0){
-                if(pwd == result[0].password){
+                console.log(result[0].user_pass);
+                const hash = result[0].user_pass;
+                var flag = bcrypt.compareSync(pwd,hash);
+                if(flag == true){
                     console.log(pwd);
-                    console.log(result[0].password);
+                    console.log(hash);
                     msg="SUCCESS!!!";
                     console.log(msg);
                 }else{
                     msg="FAIL!!!";
                     console.log(msg);
                     console.log(pwd);
-                    console.log(result[0].password);
+                    console.log(hash);
                 }
             }else{
                 msg="user not found"

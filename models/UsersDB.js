@@ -38,7 +38,8 @@ class UsersDB{
     }
     getLoginCred(userid,callback){
         console.log("getLoginCred",userid);
-        var sql = "SELECT user_pass FROM restuant_review.users WHERE user_id =?";
+        var sql = "SELECT user_pass FROM restuant_review.users WHERE user_id ='"+userid+"'";
+        console.log("getLoginCred",sql);
         return db.query(sql,[userid],callback);
     }
 }
