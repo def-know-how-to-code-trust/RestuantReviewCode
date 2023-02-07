@@ -52,6 +52,7 @@ function editReview(request,respond){
     ,now.toDateString()
     ,request.body.revi_review_pic
     ,request.body.revi_price_range);
+    console.log(review);
     reviewsDB.editReview(review,function(error,result){
         if (error){
             respond.json(error);
@@ -60,6 +61,7 @@ function editReview(request,respond){
         }
         else{
             respond.json(result);
+            console.log(now);
             console.log("review"+reviewID+"edited");
         }
     })

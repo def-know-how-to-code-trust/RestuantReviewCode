@@ -1,4 +1,5 @@
 function getAllRes() {
+    chekLog();
     var request = new XMLHttpRequest();
     request.open('GET', res_url, true);
 
@@ -20,7 +21,7 @@ function displayRes(cate) {
         var coverPic = resArray[count].res_coverPhoto;
         var resName = resArray[count].res_name;
         var cell = '<div class="card col-md-3" ><img class="card-img-top" src="' + coverPic + '" alt="Card image cap">\
-        <div class="card-body"><i class="far fa-comment fa-lg" style="float:left;cursor:pointer" data-toggle="modal" data-target="#commentModal" item="' + count + '"></i>\
+        <div class="card-body">\
         <h5 style="padding-left:30px;cursor:pointer" item="' + count + '" onmouseenter="setCurrRes(this)"><a href="ResPage.html">' + resName + '</a></h5>'
         table.insertAdjacentHTML('beforeend', cell);
         resCount++;
@@ -59,6 +60,7 @@ function setCurrRes(element){
     sessionStorage.setItem("res_ID",res_ID);
 }
 function getAllRes_Page() {
+    chekLog();
     var request = new XMLHttpRequest();
     request.open('GET', res_url, true);
 
@@ -80,7 +82,7 @@ function initMap(){
         zoom: 18,
         mapTypeId: google.maps.MapTypeId.HYBRID
     });
-    var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: resLoc_M,
         map: resMap,
         title: resNameM

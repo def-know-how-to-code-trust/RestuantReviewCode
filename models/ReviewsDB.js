@@ -19,11 +19,12 @@ class ReviewsDB{
             , review.getReviewPic()],callback);
     }
     editReview(review,callback){
-        var sql = "UPDATE restuant_review.reviews SET revi_review = ?, revi_datePosted = ?, revi_review_pic = ?, revi_price_range = ? WHERE _id_review =?";
+        var sql = "UPDATE restuant_review.reviews SET revi_review = ?, revi_datePosted = ?, revi_review_pic = ?, revi_price_range = ?,revi_rating=? WHERE _id_review =?";
         return db.query(sql, [review.getReview()
             ,review.getDatePosted()
             ,review.getPriceRange()
             ,review.getReviewPic()
+            ,review.getRating()
             , review.getId()],callback);
     }
     delReview(reviewID,callback){

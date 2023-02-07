@@ -111,8 +111,9 @@ function getLoginCred(request,respond){
                 if(flag == true){
                     console.log(pwd);
                     console.log(hash);
-                    msg="SUCCESS!!!";
+                    msg="SUCCESS";
                     console.log(msg);
+                    respond.json(msg);
                 }else{
                     msg="FAIL!!!";
                     console.log(msg);

@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
   <title>Eat In Lah</title>
   <meta charset="utf-8">
-  <link ref="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <!-- <link ref="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/mystyle.css">
 </head>
 
 <body onload="getAllRes()">
   <nav class="topNaviBar">
-    <img src="Images/Icons/Eat_in_lah.jpg" alt="Logo" id="logo-png">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html">Restaurants</a></li>
-      <li><a href="index.html">Categories</a></li>
-      <li><a href="login.html">Login | Signup</a></li>
-    </ul>
-    <form>
-      <input type="text" placeholder="Search...">
-      <button type="submit">Search</button>
-    </form>
+    <div w3-include-html="nav-bar.html"></div>
   </nav>
   <!-- This is the container that holds the initial message, heading, and movies -->
   <div class="container">
     <!-- The message will be shown when the page loads and will
     disappear after the movies are loaded -->
     <div class="row" id="parent">
-        Retrieving movies from database... Please wait...<br><br>
-        If you are seeing this message for a long time, it is likely
-        that you have a JavaScript error. Troubleshoot your script by
-        using the browser console panel now. Please use either Firefox
-        or Chrome to render this webpage.
+      Retrieving movies from database... Please wait...<br><br>
+      If you are seeing this message for a long time, it is likely
+      that you have a JavaScript error. Troubleshoot your script by
+      using the browser console panel now. Please use either Firefox
+      or Chrome to render this webpage.
     </div>
     <h3>On going promotions</h3>
     <div id="carousel">
@@ -41,21 +33,31 @@
     </div>
 
     <h3 id="summary"></h3>
-    
+
     <div id="resTable" class="row"></div>
-  <br><br>
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <script>
+    <br><br>
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <script>
       //to bring in other HTML on the fly into this page
       w3.includeHTML();
-  </script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/86ec7c1143.js" ></script>
-  <script src="JS/app.js"></script>
-  <script src="JS/restuant.js"></script>
-  <script src="JS/review.js"></script>
-  <script src="JS/carosel.js"></script>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/86ec7c1143.js"></script>
+    <script src="JS/app.js"></script>
+    <script src="JS/restuant.js"></script>
+    <script src="JS/review.js"></script>
+    <script src="JS/carosel.js"></script>
+    <script src="JS/navbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat In Lah</title>
+    <!-- <link ref="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body onload="getUserDeet()">
+    <nav class="topNaviBar">
+        <div w3-include-html="nav-bar.html"></div>
+    </nav>
+    <div class="mainProB">
+      <h1 id="ProName">Hello who</h1>
+      <img id="PIMG" src="" alt="User Picture">
+      <p>User ID</p>
+      <p id="PID"></p>
+      <p>Username</p>
+      <P id="PNAME"></P>
+      <p>Email</p>
+      <P id="PEMAIL"></P>
+      <p>Contact Number</p>
+      <P ID="PNUM"></P>
+      <p>Postal Code</p>
+      <P id="PPOSTAL"></P>
+    </div>
+</body>
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+  <script>
+      //to bring in other HTML on the fly into this page
+      w3.includeHTML();
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/86ec7c1143.js" ></script>
+  <script src="JS/app.js"></script>
+  <script src="JS/restuant.js"></script>
+  <script src="JS/review.js"></script>
+  <script src="JS/users.js"></script>
+  <script src="JS/navbar.js"></script>
+</html>

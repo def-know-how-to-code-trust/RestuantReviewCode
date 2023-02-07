@@ -30,8 +30,10 @@ function showReview(arr) {
             console.log(i);
             star += "<img src='Images/Icons/Path 24.jpg' style='width:50px' />";
         }
-        star += "<button id='delBtn' item='" + i + "' onClick='delRev(this)'></button>";
+        if ((sessionStorage.getItem("uID") == arr[i].revi_user_id)&&sessionStorage.getItem("token")!=null) {
+            star += "<button id='delBtn' item='" + i + "' onClick='delRev(this)'></button>";
         star += "<div id='editBtn' data-toggle='modal' data-target='#editRevModal' data-dismiss='modal' item='" + i + "' onClick='showEditRev(this)'></button>";
+        }
         document.getElementById("rating" + i).insertAdjacentHTML('beforebegin', star + "<br/>");
     }
 }
@@ -43,17 +45,17 @@ function newRev() {
     modal.classList.add("show-modal");
 
     rating = 0;
-    document.getElementById("userComments").value = "";
-    document.getElementById("nickname").value = "";
+    document.getElementById("userComments").value ="";
+    document.getElementById("nickname").value = sessionStorage.getItem("username");
 }
 function addRev() {
     var review = new Object();
     review.revi_res_id = parseInt(sessionStorage.getItem("res_ID"));
-    review.revi_user_id = "test_user";
+    review.revi_user_id = sessionStorage.getItem("uID");
     review.revi_user_name = document.getElementById("nickname").value;
     review.revi_review = document.getElementById("userComments").value;
-    review.revi_rating = parseInt("4");
-
+    review.revi_rating = parseInt(rating);
+    console.log(rating);
     var postReview = new XMLHttpRequest();
     postReview.open("POST", add_rew, true);
     postReview.setRequestHeader("Content-type", "application/json");
@@ -138,11 +140,10 @@ function updateRev(){
 
     var review = new Object();
     review.revi_res_id = parseInt(sessionStorage.getItem("res_ID"));
-    review.revi_user_id = "test_user";
+    review.revi_user_id = sessionStorage.getItem("uID");
     review.revi_user_name = document.getElementById("editnickname").value;
     review.revi_review = document.getElementById("edituserComments").value;
-    review.revi_rating = parseInt("4");
-
+    review.revi_rating = parseInt(rating);
     updateRew.open("PUT",editRew_url,true);
     updateRew.setRequestHeader("Content-Type", "application/json");
     updateRew.onload = function(){
